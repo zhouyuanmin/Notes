@@ -23,8 +23,8 @@ from email.mime.base import MIMEBase
 def send_email():
     # 邮件一般是由标题，发信人，收件人，邮件内容，附件等构成
     msg = MIMEMultipart()
-    msg['From'] = Header('Worker<1837722596@qq.com>')  # 发件人
-    msg['To'] = Header('Administrators<17859717522@163.com>')  # 收件人
+    msg['From'] = Header('Worker<1837@qq.com>')  # 发件人
+    msg['To'] = Header('Administrators<17859@163.com>')  # 收件人
     msg['Subject'] = Header('Work in 2020.', 'utf-8').encode()  # 标题
     msg.attach(MIMEText('hello, work completed.', 'plain', 'utf-8'))  # 内容
 
@@ -42,8 +42,8 @@ def send_email():
 
     server = smtplib.SMTP("smtp.qq.com", 25)
     server.starttls()  # 加密
-    server.login("1837722596@qq.com", "gphfapcvqmjubeje")  # 授权码
-    server.sendmail("1837722596@qq.com", ["17859717522@163.com", ], msg.as_string())
+    server.login("196@qq.com", "gphf")  # 授权码
+    server.sendmail("186@qq.com", ["17@163.com", ], msg.as_string())
     server.quit()
 
 
